@@ -27,7 +27,7 @@ jobs:
         env:
           CIBW_ARCHS_LINUX: auto aarch64 ppc64le s390x
           CIBW_ARCHS_MACOS: x86_64 universal2 arm64
-          CIBW_TEST_COMMAND: bash -c "make -C /project && pip install pytest && find {project} -maxdepth 5 -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g' && pytest {project}"
+          CIBW_TEST_COMMAND: bash -c "make -C /project && pip install pytest' && pytest {project}/bitarray"
 
       - uses: actions/upload-artifact@v2
         with:
