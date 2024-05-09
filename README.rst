@@ -1,3 +1,9 @@
+bitarray_dem: fork of https://github.com/ilanschnell/bitarray/ for customization.
+======================================
+This library modifies Schnell's bitarray class. This fork is necessary for implementing
+certain custom methods without subclassing, as bitarray is not particularly open
+to changes.
+
 bitarray: efficient arrays of booleans
 ======================================
 
