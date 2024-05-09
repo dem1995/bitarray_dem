@@ -39,7 +39,7 @@ if platform.python_implementation() == 'PyPy' or sys.version_info[0] == 2:
     macros.append(("PY_BIG_ENDIAN", str(int(sys.byteorder == 'big'))))
 
 setup(
-    name = "bitarray",
+    name = "bitarray_dem_c",
     author = "D Estes McKnight",
     author_email = "contact-me@demcknight.com",
     url = "https://github.com/dem1995/bitarray_dem",
