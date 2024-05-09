@@ -20,17 +20,17 @@ jobs:
           platforms: all
 
       - name: Test wheel
-        if: runner.os == 'Linux'
-        uses: pypa/cibuildwheel@v2.16.5
-        env:
-          CIBW_ARCHS_LINUX: auto aarch64 ppc64le s390x
-          CIBW_TEST_COMMAND: bash -c "pip install setuptools wheel && make -C /project && pip install pytest && pytest {project}/bitarray"
-
-      - name: Build wheels
-        if: runner.os != 'Linux'
+        if: runner.os == 'macOS'
         uses: pypa/cibuildwheel@v2.16.5
         env:
           CIBW_ARCHS_MACOS: x86_64 universal2 arm64
+          CIBW_TEST_COMMAND: bash -c "pip install setuptools wheel && make -C /project && pip install pytest && pytest {project}/bitarray"
+
+      - name: Build wheels
+        if: runner.os != 'macOS'
+        uses: pypa/cibuildwheel@v2.16.5
+        env:
+          CIBW_ARCHS_LINUX: auto aarch64 ppc64le s390x
 
       - uses: actions/upload-artifact@v2
         with:
