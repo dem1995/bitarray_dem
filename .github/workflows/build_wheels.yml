@@ -27,6 +27,7 @@ jobs:
           CIBW_TEST_COMMAND: bash -c "make -C /project && pip install setuptools wheel pytest && pytest {project}/bitarray"
 
       - name: Build wheels
+        if: runner.os != 'Linux'
         uses: pypa/cibuildwheel@v2.16.1
         env:
           CIBW_ARCHS_MACOS: x86_64 universal2 arm64
