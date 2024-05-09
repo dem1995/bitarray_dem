@@ -71,14 +71,7 @@ versions.  Which means you can simply:
 
 .. code-block:: shell-session
 
-    $ pip install bitarray
-
-In addition, conda packages are available (both the default Anaconda
-repository as well as conda-forge support bitarray):
-
-.. code-block:: shell-session
-
-    $ conda install bitarray
+    $ pip install bitarray_dem_c
 
 Once you have installed the package, you may want to test it:
 
