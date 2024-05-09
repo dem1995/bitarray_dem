@@ -1,7 +1,10 @@
 bitarray_dem: fork of bitarray for closer-to-bytearray implementation and convenience
 ========================================================================================
+
 This library modifies Schnell's bitarray class. This fork is necessary for implementing
 certain custom methods without subclassing.
+
+-------------------------------------------------------------------------------------------
 
 bitarray: efficient arrays of booleans
 ======================================
